@@ -1,0 +1,45 @@
+
+
+PRC ONTOLOGIA
+
+classes:
+	-Edição	
+	   -País
+	   -Pessoa
+	     -Artista
+	     -Compositor
+	     -Liricista
+	   -Música
+	   -Votação
+			
+
+
+data properties:
+	-nome
+	-capital
+	-nº participações
+	-ano da 1ª participação (de cada país)
+	-ano de vitória (pode ter vários)
+	-duração (tempo da musica)
+	-ano (ano da edição)
+	-classificacao
+	-tema (slogan)
+	-nº pontos (Votação)
+
+
+object properties:
+	-temVotaçao (Votação atribuiPontosPara País)
+	   -recebePontosDe 
+	   -atribuiPontosPara
+	-musicaDe
+	-éInterpretadaPor  
+	
+	
+	
+------------------------------------------------------------------------------------------
+	
+	
+País -> nome, capital, nº participações, ano da 1a participação, anos de vitórias
+	lista de todas as participações
+
+
