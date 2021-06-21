@@ -17,8 +17,6 @@
 
     <default-go-home />
 
-    <default-notifications />
-
     <default-account />
   </v-app-bar>
 </template>
@@ -42,10 +40,6 @@
       DefaultGoHome: () => import(
         /* webpackChunkName: "default-go-home" */
         './widgets/GoHome'
-      ),
-      DefaultNotifications: () => import(
-        /* webpackChunkName: "default-notifications" */
-        './widgets/Notifications'
       ),
     },
 

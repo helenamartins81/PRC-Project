@@ -117,8 +117,7 @@ vuetify-material-dashboard/
 ┃ ┃ ┃ ┃ ┣ DrawerHeader.vue
 ┃ ┃ ┃ ┃ ┣ DrawerToggle.vue
 ┃ ┃ ┃ ┃ ┣ GoHome.vue
-┃ ┃ ┃ ┃ ┣ Notifications.vue
-┃ ┃ ┃ ┃ ┗ Search.vue
+┃ ┃ ┃ ┃ ┗ rch.vue
 ┃ ┃   ┣ AppBar.vue
 ┃ ┃   ┣ Drawer.vue
 ┃ ┃   ┣ Footer.vue
@@ -153,12 +152,9 @@ vuetify-material-dashboard/
 ┃ ┃ ┣ helpers.js
 ┃ ┃ ┗ routes.js
 ┃ ┣ views/
-┃ ┃ ┣ Dashboard.vue
+┃ ┃ ┣ Home.vue
 ┃ ┃ ┣ Error.vue
 ┃ ┃ ┣ GoogleMaps.vue
-┃ ┃ ┣ Icons.vue
-┃ ┃ ┣ Notifications.vue
-┃ ┃ ┣ RegularTables.vue
 ┃ ┃ ┣ Typography.vue
 ┃ ┃ ┗ UserProfile.vue
 ┃ ┣ App.vue

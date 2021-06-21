@@ -201,14 +201,12 @@
     mixins: [Proxyable],
 
     data: () => ({
-      color: '#E91E63',
+      color: '#A6032F',
       colors: [
-        '#9C27b0',
-        '#00CAE3',
-        '#4CAF50',
-        '#ff9800',
-        '#E91E63',
-        '#FF5252',
+        '#A6032F',
+        '#732751',
+        '#724EBF',
+        '#886BF2',
       ],
       menu: false,
       saveImage: '',

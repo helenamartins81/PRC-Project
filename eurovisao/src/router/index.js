@@ -20,21 +20,18 @@ const router = new Router({
   },
   routes: [
     layout('Default', [
-      route('Dashboard'),
+      route('Home'),
 
       // Pages
-      route('UserProfile', null, 'components/profile'),
+      route('About', null, 'about'),
 
       // Components
-      route('Notifications', null, 'components/notifications'),
-      route('Icons', null, 'components/icons'),
-      route('Typography', null, 'components/typography'),
-
-      // Tables
-      route('Regular Tables', null, 'tables/regular'),
+      route('Edicao', null, 'edicao'),
 
       // Maps
-      route('Google Maps', null, 'maps/google'),
+      route('Musica', null, 'musica'),
+
+      route('EdicaoX', null, 'edicao/:name'),
     ]),
   ],
 })

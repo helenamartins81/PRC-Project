@@ -15,7 +15,7 @@
 <script>
   // Utilities
   export default {
-    name: 'DashboardView',
+    name: 'HomeView',
 
     data () {
       return {

@@ -9,38 +9,23 @@ const state = {
   items: [
     {
       title: 'Home',
-      icon: 'mdi-view-dashboard',
+      icon: 'mdi-home',
       to: '/',
     },
     {
-      title: 'User Profile',
-      icon: 'mdi-account',
-      to: '/components/profile/',
+      title: 'About',
+      icon: 'mdi-plus',
+      to: '/about',
     },
     {
-      title: 'Regular Tables',
-      icon: 'mdi-clipboard-outline',
-      to: '/tables/regular/',
+      title: 'Edição',
+      icon: 'mdi-calendar-star',
+      to: '/edicao',
     },
     {
-      title: 'Typography',
-      icon: 'mdi-format-font',
-      to: '/components/typography/',
-    },
-    {
-      title: 'Icons',
-      icon: 'mdi-chart-bubble',
-      to: '/components/icons/',
-    },
-    {
-      title: 'Google Maps',
-      icon: 'mdi-map-marker',
-      to: '/maps/google/',
-    },
-    {
-      title: 'Notifications',
-      icon: 'mdi-bell',
-      to: '/components/notifications/',
+      title: 'Musicas',
+      icon: 'mdi-music-note',
+      to: '/musica',
     },
   ],
 }
@@ -50,7 +35,6 @@ const mutations = make.mutations(state)
 const actions = {
   ...make.actions(state),
   init: async ({ dispatch }) => {
-    //
   },
 }
 
