@@ -3,43 +3,68 @@
 PRC ONTOLOGIA
 
 classes:
-	-Edição	
-	   -País
+	   -Edição *	
+	   -País *
 	   -Pessoa
-	     -Artista
+	     -Artista * 
 	     -Compositor
 	     -Liricista
-	   -Música
-	   -Votação
-			
+	   -Música *
+	   -Evento (se é final ou semi-final) *
+	   -Classificação (id: c[ano][país])
+	   
 
 
 data properties:
 	-nome
-	-capital
-	-nº participações
-	-ano da 1ª participação (de cada país)
-	-ano de vitória (pode ter vários)
-	-duração (tempo da musica)
 	-ano (ano da edição)
-	-classificacao
-	-tema (slogan)
-	-nº pontos (Votação)
+	-tema (Edição)
+	-nº total pontos (País)
+	-tipoEvento (se é final ou semi-final) 
+	-titulo (Musica)
+	-duração (Musica)
+	-letra (Musica)
+
 
 
 object properties:
-	-temVotaçao (Votação atribuiPontosPara País)
-	   -recebePontosDe 
-	   -atribuiPontosPara
-	-musicaDe
-	-éInterpretadaPor  
+
+	
+	-interpretaMusica (Artista interpretaMusica Musica)*
+	-éInterpretadaPor  (Musica éInterpretadaPor Artista)*
+	-representaPaís (o artista representa o país)*
+	-escreveMusica (Liricista escreveMusica Musica)*
+	-escritaPor (Musica escritaPor Liricista)*
+	-compõeMusica (Compositor compoeMusica Musica) *
+	-compostaPor (Musica compostaPor Compositor) *
+	-temEvento (Edição temEvento Evento)*
+	-participaEm (País participaEm Evento)*
+	-organizadaPor (Edição organizadaPor País)*
+	-organiza (País organiza Edição)*
+	-vencedorDe (País vencedorDe Edição)*
+	
+	-temMusica (País temMusica Música)*
+	-temClassificação (País temClassificação Classificação)*
+	-referenteA (Classificação referenteA Evento)*
+	-recebePontosDe (Classificação recebePontosDe País)
+	-atribuiPontosA (País atribuiPontosA Classificação)
+	
+	Evento ---tem---> Votação
+	País --participa-> Evento
+	País --tem classificacao -> Classificação (tem várias, uma para cada edição)
 	
 	
+Classificação c2021es_final
+	:referenteA :final2021
+	:classificação 24
+	:recebePontosDe :pt
+	:totalPontos :6
 	
 ------------------------------------------------------------------------------------------
 	
 	
-País -> nome, capital, nº participações, ano da 1a participação, anos de vitórias
-	lista de todas as participações
+
+
+
 
 
