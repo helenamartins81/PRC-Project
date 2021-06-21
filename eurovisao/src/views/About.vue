@@ -14,8 +14,7 @@
             src="https://marcas-logos.net/wp-content/uploads/2020/03/EUROVISION-LOGO.png"
             width="200px"
           />
-
-          <v-card-text >
+          <v-card-text>
             <h6 class="text-h6 mb-2 text--secondary">
               About
             </h6>
@@ -30,7 +29,7 @@
             <p class="text--secondary">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolorem deserunt veniam tempora magnam quisquam quam error iusto cupiditate ducimus, et eligendi saepe voluptatibus assumenda similique temporibus placeat animi dicta?
             </p>
-             <p class="text--secondary">
+            <p class="text--secondary">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolorem deserunt veniam tempora magnam quisquam quam error iusto cupiditate ducimus, et eligendi saepe voluptatibus assumenda similique temporibus placeat animi dicta?
             </p>
             <p class="text--secondary">

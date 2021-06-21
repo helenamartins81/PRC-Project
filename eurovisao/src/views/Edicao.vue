@@ -10,15 +10,19 @@
     >
       <v-col cols="12">
         <v-toolbar flat>
-          <v-toolbar-title class="text-h5 primary--text">Lista de Edições</v-toolbar-title>
-          <v-spacer></v-spacer>
+          <v-toolbar-title
+            class="text-h5 primary--text"
+          >
+            Lista de Edições
+          </v-toolbar-title>
+          <v-spacer />
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
             label="Search"
             single-line
             hide-details
-          ></v-text-field>
+          />
         </v-toolbar>
         <v-data-table
           flat
@@ -39,7 +43,7 @@
           <template
             #item.musica="{ item }"
           >
-            {{item.musica}}
+            {{ item.musica }}
           </template>
         </v-data-table>
       </v-col>

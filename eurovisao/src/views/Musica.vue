@@ -10,30 +10,34 @@
     >
       <v-col cols="12">
         <v-toolbar flat>
-          <v-toolbar-title class="text-h5 primary--text">Lista de Edições</v-toolbar-title>
-          <v-spacer></v-spacer>
+          <v-toolbar-title
+            class="text-h5 primary--text"
+          >
+            Lista de Edições
+          </v-toolbar-title>
+          <v-spacer />
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
             label="Search"
             single-line
             hide-details
-          ></v-text-field>
+          />
         </v-toolbar>
-          <v-data-table
-            :headers="headers"
-            :items="desserts"
-            :items-per-page="10"
-            :search="search"
-            loading-text="Loading... Please wait"
-            class="elevation-1"
-          >
-            <template #item.edicao="{ item }">
-              <router-link :to="{ name: 'EdicaoX', params: { name: item.edicao } }">
-                {{ item.edicao }}
-              </router-link>
-            </template>
-          </v-data-table>
+        <v-data-table
+          :headers="headers"
+          :items="desserts"
+          :items-per-page="10"
+          :search="search"
+          loading-text="Loading... Please wait"
+          class="elevation-1"
+        >
+          <template #item.edicao="{ item }">
+            <router-link :to="{ name: 'EdicaoX', params: { name: item.edicao } }">
+              {{ item.edicao }}
+            </router-link>
+          </template>
+        </v-data-table>
       </v-col>
     </v-row>
   </v-container>
