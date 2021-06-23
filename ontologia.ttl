@@ -1,0 +1,225 @@
+@prefix : <http://www.di.uminho.pt/prc2021/eurovision/v2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.di.uminho.pt/prc2021/eurovision/v2> .
+
+<http://www.di.uminho.pt/prc2021/eurovision/v2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/eurovision#compostaPor
+<http://www.di.uminho.pt/prc2021/eurovision#compostaPor> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <http://www.di.uminho.pt/prc2021/eurovision#compõe> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#compõe
+<http://www.di.uminho.pt/prc2021/eurovision#compõe> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#escreve
+<http://www.di.uminho.pt/prc2021/eurovision#escreve> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <http://www.di.uminho.pt/prc2021/eurovision#escritaPor> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#escritaPor
+<http://www.di.uminho.pt/prc2021/eurovision#escritaPor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#foiClassificadoCom
+<http://www.di.uminho.pt/prc2021/eurovision#foiClassificadoCom> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <http://www.di.uminho.pt/prc2021/eurovision#temClassificação> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#interpretaMúsica
+<http://www.di.uminho.pt/prc2021/eurovision#interpretaMúsica> rdf:type owl:ObjectProperty ;
+                                                              owl:inverseOf <http://www.di.uminho.pt/prc2021/eurovision#éInterpretadaPor> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#organiza
+<http://www.di.uminho.pt/prc2021/eurovision#organiza> rdf:type owl:ObjectProperty ;
+                                                      owl:inverseOf <http://www.di.uminho.pt/prc2021/eurovision#organizadaPor> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#organizadaPor
+<http://www.di.uminho.pt/prc2021/eurovision#organizadaPor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#representaPaís
+<http://www.di.uminho.pt/prc2021/eurovision#representaPaís> rdf:type owl:ObjectProperty ;
+                                                            owl:inverseOf <http://www.di.uminho.pt/prc2021/eurovision#éRepresentadoPor> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#temClassificação
+<http://www.di.uminho.pt/prc2021/eurovision#temClassificação> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#temMúsica
+<http://www.di.uminho.pt/prc2021/eurovision#temMúsica> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#vencedorDe
+<http://www.di.uminho.pt/prc2021/eurovision#vencedorDe> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#éInterpretadaPor
+<http://www.di.uminho.pt/prc2021/eurovision#éInterpretadaPor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#éRepresentadoPor
+<http://www.di.uminho.pt/prc2021/eurovision#éRepresentadoPor> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/eurovision#anoEdição
+<http://www.di.uminho.pt/prc2021/eurovision#anoEdição> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#juri
+<http://www.di.uminho.pt/prc2021/eurovision#juri> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#link
+<http://www.di.uminho.pt/prc2021/eurovision#link> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#lugar
+<http://www.di.uminho.pt/prc2021/eurovision#lugar> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#nome
+<http://www.di.uminho.pt/prc2021/eurovision#nome> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#televoto
+<http://www.di.uminho.pt/prc2021/eurovision#televoto> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#totalPontos
+<http://www.di.uminho.pt/prc2021/eurovision#totalPontos> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#título
+<http://www.di.uminho.pt/prc2021/eurovision#título> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Artista
+<http://www.di.uminho.pt/prc2021/eurovision#Artista> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.di.uminho.pt/prc2021/eurovision#Pessoa> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Classificação
+<http://www.di.uminho.pt/prc2021/eurovision#Classificação> rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Compositor
+<http://www.di.uminho.pt/prc2021/eurovision#Compositor> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.di.uminho.pt/prc2021/eurovision#Pessoa> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Edição
+<http://www.di.uminho.pt/prc2021/eurovision#Edição> rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Liricista
+<http://www.di.uminho.pt/prc2021/eurovision#Liricista> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.di.uminho.pt/prc2021/eurovision#Pessoa> .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Música
+<http://www.di.uminho.pt/prc2021/eurovision#Música> rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#País
+<http://www.di.uminho.pt/prc2021/eurovision#País> rdf:type owl:Class .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Pessoa
+<http://www.di.uminho.pt/prc2021/eurovision#Pessoa> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Luísa_Sobral
+<http://www.di.uminho.pt/prc2021/eurovision#Luísa_Sobral> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.di.uminho.pt/prc2021/eurovision#Liricista> ,
+                                                                   <http://www.di.uminho.pt/prc2021/eurovision#Pessoa> ;
+                                                          <http://www.di.uminho.pt/prc2021/eurovision#escreve> <http://www.di.uminho.pt/prc2021/eurovision#m2017_pt> ;
+                                                          <http://www.di.uminho.pt/prc2021/eurovision#nome> "Luisa Sobral" .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Luísa_SobralC
+<http://www.di.uminho.pt/prc2021/eurovision#Luísa_SobralC> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.di.uminho.pt/prc2021/eurovision#Compositor> ,
+                                                                    <http://www.di.uminho.pt/prc2021/eurovision#Pessoa> ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#compõe> <http://www.di.uminho.pt/prc2021/eurovision#m2017_pt> ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#nome> "Luisa Sobral" .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Portugal
+<http://www.di.uminho.pt/prc2021/eurovision#Portugal> rdf:type owl:NamedIndividual ,
+                                                               <http://www.di.uminho.pt/prc2021/eurovision#País> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#temClassificação> <http://www.di.uminho.pt/prc2021/eurovision#class_pt_2017> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#temMúsica> <http://www.di.uminho.pt/prc2021/eurovision#m2017_pt> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#vencedorDe> <http://www.di.uminho.pt/prc2021/eurovision#ed2017> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#éRepresentadoPor> <http://www.di.uminho.pt/prc2021/eurovision#Salvador_Sobral> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#nome> "Portugal" .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#Salvador_Sobral
+<http://www.di.uminho.pt/prc2021/eurovision#Salvador_Sobral> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.di.uminho.pt/prc2021/eurovision#Artista> ,
+                                                                      <http://www.di.uminho.pt/prc2021/eurovision#Pessoa> ;
+                                                             <http://www.di.uminho.pt/prc2021/eurovision#interpretaMúsica> <http://www.di.uminho.pt/prc2021/eurovision#m2017_pt> ;
+                                                             <http://www.di.uminho.pt/prc2021/eurovision#representaPaís> <http://www.di.uminho.pt/prc2021/eurovision#Portugal> ;
+                                                             <http://www.di.uminho.pt/prc2021/eurovision#nome> "Salvador Sobral" .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#class_pt_2017
+<http://www.di.uminho.pt/prc2021/eurovision#class_pt_2017> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.di.uminho.pt/prc2021/eurovision#Classificação> ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#foiClassificadoCom> <http://www.di.uminho.pt/prc2021/eurovision#Portugal> ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#juri> 382.0 ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#lugar> 1 ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#televoto> 376.0 ;
+                                                           <http://www.di.uminho.pt/prc2021/eurovision#totalPontos> 758.0 .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#ed2017
+<http://www.di.uminho.pt/prc2021/eurovision#ed2017> rdf:type owl:NamedIndividual ,
+                                                             <http://www.di.uminho.pt/prc2021/eurovision#Edição> ;
+                                                    <http://www.di.uminho.pt/prc2021/eurovision#organizadaPor> <http://www.di.uminho.pt/prc2021/eurovision#ua> ;
+                                                    <http://www.di.uminho.pt/prc2021/eurovision#anoEdição> 2017 .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#m2017_pt
+<http://www.di.uminho.pt/prc2021/eurovision#m2017_pt> rdf:type owl:NamedIndividual ,
+                                                               <http://www.di.uminho.pt/prc2021/eurovision#Música> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#compostaPor> <http://www.di.uminho.pt/prc2021/eurovision#Luísa_SobralC> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#escritaPor> <http://www.di.uminho.pt/prc2021/eurovision#Luísa_Sobral> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#éInterpretadaPor> <http://www.di.uminho.pt/prc2021/eurovision#Salvador_Sobral> ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#link> "https://youtube.com/watch?v=Qotooj7ODCM" ;
+                                                      <http://www.di.uminho.pt/prc2021/eurovision#título> "Amar Pelos Dois" .
+
+
+###  http://www.di.uminho.pt/prc2021/eurovision#ua
+<http://www.di.uminho.pt/prc2021/eurovision#ua> rdf:type owl:NamedIndividual ,
+                                                         <http://www.di.uminho.pt/prc2021/eurovision#País> ;
+                                                <http://www.di.uminho.pt/prc2021/eurovision#organiza> <http://www.di.uminho.pt/prc2021/eurovision#ed2017> ;
+                                                <http://www.di.uminho.pt/prc2021/eurovision#nome> "Ukraine" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
