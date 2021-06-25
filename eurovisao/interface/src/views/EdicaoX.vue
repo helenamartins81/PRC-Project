@@ -19,8 +19,8 @@
             <p class="text-h5 mb-2">Música Vencedora: {{this.musica}}</p>
             <v-spacer />
              <v-data-table
-              :headers="dessertHeaders"
-              :items="desserts"
+              :headers="headers"
+              :items="this.pais"
               :search="search"
               item-key="name"
               class="elevation-1"
@@ -52,24 +52,25 @@
     name: 'EdicaoXView',
     data () {
       return {
+        pais: [],
         vencedor: '',
         organizador: '',
         musica: '',
         search: '',
         id: this.$route.params.name,
-        expanded: [],
-        dessertHeaders: [
+        headers: [
           {
             text: 'País',
             align: 'start',
             sortable: true,
-            value: 'name',
+            value: 'p',
           },
-          { text: 'Artista(s)', value: 'calories' },
-          { text: 'Musica', value: 'fat' },
-          { text: 'Juri', value: 'carbs' },
-          { text: 'Publico', value: 'protein' },
-          { text: '', value: 'data-table-expand' },
+          { text: 'Artista(s)', value: 'artista' },
+          { text: 'Musica', value: 'musica' },
+          { text: 'Classificação', value: 'lugar' },
+          { text: 'Juri', value: 'juri' },
+          { text: 'Televoto', value: 'televoto' },
+          { text: 'Total', value: 'total' },
         ],
         desserts: [
           {
@@ -152,6 +153,9 @@
         this.musica = this.lista[0].musicaVencedora
         this.vencedor = this.lista[0].paisVencedor
         this.organizador = this.lista[0].organizador
+        const response2 = await axios.get('http://localhost:3000/edicao/' + this.id+'/pais')
+        this.pais = response2.data
+
       } catch (e) {
         return e
       }

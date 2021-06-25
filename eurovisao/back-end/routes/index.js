@@ -15,6 +15,13 @@ router.get('/edicao/:id', function(req, res, next) {
     .catch(e => res.status(500).send(`Erro na listagem das edições: ${e}`))
 });
 
+
+router.get('/edicao/:id/pais', function(req, res, next) {
+  Edicao.getPais(req.params.id)
+    .then(dados => res.jsonp(dados))
+    .catch(e => res.status(500).send(`Erro na listagem das edições: ${e}`))
+});
+
 router.get('/musicas', function(req, res, next) {
   Edicao.getMusicas()
     .then(dados => res.jsonp(dados))

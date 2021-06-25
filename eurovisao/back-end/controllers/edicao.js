@@ -72,6 +72,37 @@ Edicao.getEdicao = async function(id){
     } 
 }
 
+
+
+
+Edicao.getPais = async function(id){
+    var query = `select ?p ?lugar ?juri ?total ?televoto ?musica ?artista where { 
+        ?class rdf:type c:Classificação .
+        ?class c:anoEdição ${id} .
+        ?class c:foiClassificadoCom ?pais.
+        ?pais c:nome ?p.
+    	?pais c:temMúsica ?m .
+    	?m c:anoEdição ${id} .
+    	?m c:título ?musica .
+    	?m c:éInterpretadaPor ?a.
+    	?a c:nome ?artista .
+        ?class c:lugar ?lugar.
+        OPTIONAL {?class c:totalPontos ?total}.
+        OPTIONAL {?class c:televoto ?televoto}.
+        OPTIONAL {?class c:juri ?juri}.
+}` 
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+
 Edicao.getMusicas = async function(){
     
     var query = `select distinct ?ano (group_concat(distinct ?link; separator = ' ; ') as ?links) (group_concat(distinct ?m; separator = ' ; ') as ?musicas) ?pais ?lugar ?televoto ?juri ?total ?artista where { 
