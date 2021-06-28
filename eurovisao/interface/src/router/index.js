@@ -32,6 +32,8 @@ const router = new Router({
       route('Musica', null, 'musica'),
 
       route('EdicaoX', null, 'edicao/:name'),
+
+      route('Tops', null, 'tops'),
     ]),
   ],
 })

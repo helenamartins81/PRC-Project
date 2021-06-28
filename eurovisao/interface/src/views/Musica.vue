@@ -31,28 +31,6 @@
               ></v-text-field>
             </v-toolbar>
           </template>
-          <template v-slot:expanded-item="{ headers, items }">
-            <tr>
-              <th>Link</th>
-              <td>{item.links}</td>
-            </tr>
-            <tr>
-              <th>Liricístas</th>
-              <td>{item.links}</td>
-            </tr>
-            <tr>
-              <th>Compositores</th>
-              <td>{item.links}</td>
-            </tr>
-            <tr>
-              <th>Pontuação do Televoto</th>
-              <td>{item.links}</td>
-            </tr>
-            <tr>
-              <th>Pontuação do Júri</th>
-              <td>{item.links}</td>
-            </tr>
-          </template>
         </v-data-table>
       </v-col>
     </v-row>
@@ -82,12 +60,32 @@
           { text: 'Classificação', value: 'lugar', class: 'primary--text' },
           { text: 'Edição', value: 'ano', class: 'primary--text' },
         ],
+
+        headers2: [
+          {
+            text: 'Nome',
+            align: 'start',
+            sortable: true,
+            value: 'musicas',
+            class: 'primary--text',
+          },
+          { text: 'Link', value: 'links', class: 'primary--text' },
+          { text: 'Liricístas', value: 'liricista', class: 'primary--text' },
+          { text: 'Pontuação', value: 'total', class: 'primary--text' },
+          { text: 'Classificação', value: 'lugar', class: 'primary--text' },
+          { text: 'Edição', value: 'ano', class: 'primary--text' },
+
+
+          
+        ],
       }
+
     },
     created: async function () {
       try {
         const response = await axios.get('http://localhost:3000/musicas')
         this.musicas = response.data
+        console.log(musicas)
         const response2 = await axios.get('http://localhost:3000/musicas_L_C')
         this.musicas_L_C = response2.data
       } catch (e) {

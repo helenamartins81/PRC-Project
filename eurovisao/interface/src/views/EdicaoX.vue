@@ -17,6 +17,7 @@
             <p class="text-h5 mb-2">País da realização : {{this.organizador}}</p>
             <p class="text-h5 mb-2">País Vencedor: {{this.vencedor}}</p>
             <p class="text-h5 mb-2">Música Vencedora: {{this.musica}}</p>
+            
             <v-spacer />
              <v-data-table
               :headers="headers"

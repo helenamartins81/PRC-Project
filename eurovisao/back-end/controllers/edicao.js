@@ -159,4 +159,114 @@ Edicao.getMusicas_L_C = async function(){
     } 
 }
 
+Edicao.getTopArtista = async function(){
+    var query = `select  ?pais (count(distinct ?ed) as ?numEdicoes)  where { 
+        ?ed rdf:type c:Edição .
+    	?ed c:temPaísVencedor ?p.
+    	?p c:nome ?pais.
+    
+        }group by ?pais
+        order by DESC(?numEdicoes)
+        limit 10` 
+
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+Edicao.getTopOrganizador = async function(){
+    var query = `select  ?pais (count(distinct ?ed) as ?numEdicoes)  where { 
+        ?ed rdf:type c:Edição .
+    	?ed c:organizadaPor ?p.
+    	?p c:nome ?pais.
+    
+        }group by ?pais
+        order by DESC(?numEdicoes)
+        limit 10` 
+
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+Edicao.getTopArt = async function(){
+    var query = `select  ?artista ?pais (count(distinct ?m) as ?numEdicoes)  where { 
+        ?ed rdf:type c:Artista .
+    	?ed c:interpretaMúsica ?m.
+    	?ed c:representaPaís ?p.
+    	?p c:nome ?pais.
+    	?ed c:nome ?artista.
+    
+        }group by ?artista ?pais
+        order by DESC(?numEdicoes)
+        limit 10` 
+
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+Edicao.getTopLiricista = async function(){
+    var query = `select  ?artista ?pais (count(distinct ?m) as ?numEdicoes)  where { 
+        ?ed rdf:type c:Liricista .
+    	?ed c:escreve ?m.
+    	?ed c:representaPaís ?p.
+    	?p c:nome ?pais.
+    	?ed c:nome ?artista.
+    
+        }group by ?artista ?pais
+        order by DESC(?numEdicoes)
+        limit 10` 
+
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
+
+Edicao.getTopCompositor = async function(id){
+    var query = `select  ?artista ?pais (count(distinct ?m) as ?numEdicoes)  where { 
+        ?ed rdf:type c:Compositor .
+    	?ed c:compõe ?m.
+    	?ed c:representaPaís ?p.
+    	?p c:nome ?pais.
+    	?ed c:nome ?artista.
+    
+        }group by ?artista ?pais
+        order by DESC(?numEdicoes)
+        limit 10` 
+
+    var encoded = encodeURIComponent(prefixes + query)
+
+    try{
+        var response = await axios.get(getLink + encoded)
+        return myNormalize(response.data)
+    }
+    catch(e){
+        throw(e)
+    } 
+}
 

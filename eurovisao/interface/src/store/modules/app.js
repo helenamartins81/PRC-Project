@@ -27,6 +27,11 @@ const state = {
       icon: 'mdi-music-note',
       to: '/musica',
     },
+    {
+      title: 'Tops',
+      icon: 'mdi-trophy',
+      to: '/tops',
+    },
   ],
 }
 

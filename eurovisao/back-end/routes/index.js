@@ -36,5 +36,37 @@ router.get('/musicas_L_C', function(req, res, next) {
     .catch(e => res.status(500).send(`Erro na listagem das musicas liricistas e compositores: ${e}`))
 });
 
+router.get('/topArtista', function(req, res, next) {
+  Edicao.getTopArtista()
+    .then(dados => res.jsonp(dados))
+    .catch(e => res.status(500).send(`Erro na listagem das musicas liricistas e compositores: ${e}`))
+});
+
+router.get('/topOrganizador', function(req, res, next) {
+  Edicao.getTopOrganizador()
+    .then(dados => res.jsonp(dados))
+    .catch(e => res.status(500).send(`Erro na listagem das musicas liricistas e compositores: ${e}`))
+});
+
+
+
+router.get('/topArt', function(req, res, next) {
+  Edicao.getTopArt()
+    .then(dados => res.jsonp(dados))
+    .catch(e => res.status(500).send(`Erro na listagem das musicas liricistas e compositores: ${e}`))
+});
+
+router.get('/topLiricista', function(req, res, next) {
+  Edicao.getTopLiricista()
+    .then(dados => res.jsonp(dados))
+    .catch(e => res.status(500).send(`Erro na listagem das musicas liricistas e compositores: ${e}`))
+});
+
+router.get('/topCompositor', function(req, res, next) {
+  Edicao.getTopCompositor()
+    .then(dados => res.jsonp(dados))
+    .catch(e => res.status(500).send(`Erro na listagem das musicas liricistas e compositores: ${e}`))
+});
+
 module.exports = router;
 
