@@ -13,11 +13,6 @@ const state = {
       to: '/',
     },
     {
-      title: 'About',
-      icon: 'mdi-plus',
-      to: '/about',
-    },
-    {
       title: 'Edição',
       icon: 'mdi-calendar-star',
       to: '/edicao',

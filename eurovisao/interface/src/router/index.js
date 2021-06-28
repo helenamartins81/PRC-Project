@@ -22,9 +22,6 @@ const router = new Router({
     layout('Default', [
       route('Home'),
 
-      // Pages
-      route('About', null, 'about'),
-
       // Components
       route('Edicao', null, 'edicao'),
 
