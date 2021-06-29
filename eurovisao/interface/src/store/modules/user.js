@@ -16,10 +16,10 @@ const state = {
     'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)',
   ],
   images: [
-    'https://demos.creative-tim.com/material-dashboard-pro/assets/img/sidebar-1.jpg',
-    'https://demos.creative-tim.com/material-dashboard-pro/assets/img/sidebar-2.jpg',
-    'https://demos.creative-tim.com/material-dashboard-pro/assets/img/sidebar-3.jpg',
-    'https://demos.creative-tim.com/material-dashboard-pro/assets/img/sidebar-4.jpg',
+    'https://www.ukrainetogo.com/wp-content/uploads/2017/09/sobral-3.jpg',
+    'https://www.middleeasteye.net/sites/default/files/styles/article_page/public/images-story/israelieurovision.afp_.jpg?itok=9uv2a_Au',
+    'https://www.eurovision.de/niederlande1166_v-contentxl.jpg',
+    'https://i1.wp.com/escxtra.com/wp-content/uploads/Maneskin-2021-e1621794952242.jpg?fit=1254%2C680&ssl=1',
   ],
   rtl: false,
 }
